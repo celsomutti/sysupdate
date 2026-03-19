@@ -850,10 +850,6 @@ object Main: TMain
             Caption = 'PanelLabelProgressBar'
             ShowCaption = False
             TabOrder = 0
-            ExplicitLeft = 68
-            ExplicitTop = 0
-            ExplicitWidth = 543
-            ExplicitHeight = 68
             object LabelProgressBar: TLabel
               Left = 0
               Top = 0

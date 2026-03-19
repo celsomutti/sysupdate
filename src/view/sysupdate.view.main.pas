@@ -111,9 +111,9 @@ var
 begin
   FUpdate := TAutoUpdate.Create(Self);
   try
-    FUpdate.Username := 'alocarioca.novorioexpress.com';
-    FUpdate.Password := 'al0c@rioca';
-    FUpdate.Host := 'ftp.novorioexpress.com';
+    FUpdate.Username := 'blinklog';
+    FUpdate.Password := 'blink2026';
+    FUpdate.Host := 'ftp.blinklog.kinghost.net';
     FUpdate.Port := 21;
     ActiveIndicator;
     FUpdate.Execute;

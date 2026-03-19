@@ -39,7 +39,7 @@ type
 
 const
   VERSION = 'version';
-  APPNAME = 'InternalName';
+  APPNAME = 'internalname';
   VERSIONNUMBER = 'number';
 
 implementation
@@ -101,7 +101,7 @@ begin
   if FileExists(getDirExe + 'versionFTP.ini') then
     DeleteFile(getDirExe + 'versionFTP.ini');
 
-  FPathServer := '/Download/' + FNomeApp;
+  FPathServer := 'update/' + FNomeApp;
   FidFTP.Get(FPathServer + '/versionFTP.ini', getDirExe + 'versionFTP.ini', True, True);
 
   oArquivoINI := TIniFile.Create(getDirExe + 'versionFTP.ini');
@@ -164,10 +164,10 @@ var
   UnZipper: TZipFile;
   sZIPName: string;
 begin
-  if FileExists(getDirExe + 'SisBackup.exe') then
-    DeleteFile(getDirExe + 'SisBackup.exe');
+  if FileExists(getDirExe + FNomeApp + 'Backup.exe') then
+    DeleteFile(getDirExe + FNomeApp + 'Backup.exe');
 
-  RenameFile(getDirExe + 'Sistema.exe', getDirExe + 'SisBackup.exe');
+  RenameFile(getDirExe + FNomeApp  + '.exe', getDirExe + FNomeApp + 'Backup.exe');
   sZIPName := getDirExe + 'update.zip';
 
   UnZipper := TZipFile.Create();
